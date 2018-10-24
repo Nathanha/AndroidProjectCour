@@ -36,6 +36,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         nav_view.setNavigationItemSelectedListener(this)
     }
 
+    override fun onStart() {
+        super.onStart()
+
+        replaceFragment(AccueilFragment())
+    }
+
 
 
     override fun onBackPressed() {
@@ -65,24 +71,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_camera -> {
-                // Handle the camera action
+            R.id.nav_accueil -> {
+                replaceFragment(AccueilFragment())
+                //                val changePage = Intent(this@MainActivity, AdapterView::class.java)
+                //                startActivity(changePage)
             }
-            R.id.nav_gallery -> {
-                replaceFragment(TestFragment())
-            }
-            R.id.nav_slideshow -> {
-                val changePage = Intent(this@MainActivity, AdapterView::class.java)
-                startActivity(changePage)
-            }
-            R.id.nav_manage -> {
+            R.id.nav_anko -> {
 
             }
-            R.id.nav_share -> {
-
+            R.id.nav_offres -> {
+                replaceFragment(OffreFragment())
             }
-            R.id.nav_send -> {
-
+            R.id.nav_inscription -> {
+                replaceFragment(InscriptionFragment())
             }
         }
 
