@@ -1,35 +1,31 @@
 package fr.nathan.projectbaseandroid
 
-import android.support.annotation.LayoutRes
+import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.item_my_object.view.*
 
-class AndVersionAdapteur(val items: Array<MyObject>) : RecyclerView.Adapter<AndVersionAdapteur.ViewHolder>() {
+class AnimalAdapter(val items : ArrayList<String>) : RecyclerView.Adapter<ViewHolder>() {
 
-    class ViewHolder(val view: View) : RecyclerView.ViewHolder(view){
-        fun bindMyObject(myObject: MyObject){
-            with(myObject){
-                itemView.objectName.text = "$name"
-
-            }
-        }
+    // Gets the number of animals in the list
+    override fun getItemCount(): Int {
+        return items.size
     }
 
-    override fun getItemCount(): Int = items.size
-
-    fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachToRoot: Boolean = false): View{
-        return LayoutInflater.from(context).inflate(layoutRes, this, attachToRoot)
+    // Inflates the item views
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        return ViewHolder(LayoutInflater.from(parent?.context).inflate(R.layout.item_my_object, parent, false))
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AndVersionAdapteur.ViewHolder {
-        return ViewHolder(parent.inflate(R.layout.item_my_object))
-    }
-
+    // Binds each animal in the ArrayList to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindMyObject(items[position])
+        holder?.tvAnimalType?.text = items.get(position)
     }
+}
 
+    class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
+    // Holds the TextView that will add each animal to
+    val tvAnimalType = view.tv_animal_type
 }
