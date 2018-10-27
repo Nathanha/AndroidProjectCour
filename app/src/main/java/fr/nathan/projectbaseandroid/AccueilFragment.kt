@@ -7,12 +7,12 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_accueil.*
 
 class AccueilFragment : Fragment() {
 
-    var items: ArrayList<String> = ArrayList()
+    var genre: ArrayList<String> = ArrayList()
     val animals: ArrayList<String> = ArrayList()
+    val img: ArrayList<Int> = ArrayList()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,57 +20,48 @@ class AccueilFragment : Fragment() {
     ): View? {
         addAnimals()
 
-        items.add("Salut")
-        items.add("LOL")
-        items.add("Mdr")
-
         var rootView = inflater.inflate(R.layout.fragment_accueil, container, false)
 
         var listAnimal = rootView.findViewById(R.id.rv_animal_list) as RecyclerView
 
         listAnimal.layoutManager = LinearLayoutManager(activity)
-        listAnimal.adapter = AnimalAdapter(animals)
+        listAnimal.adapter = AnimalAdapter(animals, genre, img)
 
         // Inflate the layout for this fragment
         return rootView
     }
 
 
-
     // Adds animals to the empty animals ArrayList
     fun addAnimals() {
-        animals.add("dog")
-        animals.add("cat")
-        animals.add("owl")
-        animals.add("cheetah")
-        animals.add("raccoon")
-        animals.add("bird")
-        animals.add("snake")
-        animals.add("lizard")
-        animals.add("hamster")
-        animals.add("bear")
-        animals.add("lion")
-        animals.add("tiger")
-        animals.add("horse")
-        animals.add("frog")
-        animals.add("fish")
-        animals.add("shark")
-        animals.add("turtle")
-        animals.add("elephant")
-        animals.add("cow")
-        animals.add("beaver")
-        animals.add("bison")
-        animals.add("porcupine")
-        animals.add("rat")
-        animals.add("mouse")
-        animals.add("goose")
-        animals.add("deer")
-        animals.add("fox")
-        animals.add("moose")
-        animals.add("buffalo")
-        animals.add("monkey")
-        animals.add("penguin")
-        animals.add("parrot")
+        animals.add("1")
+        animals.add("2")
+        animals.add("3")
+        animals.add("4")
+        animals.add("5")
+        animals.add("6")
+        animals.add("7")
+        animals.add("8")
+        animals.add("9")
+        genre.add("1")
+        genre.add("2")
+        genre.add("3")
+        genre.add("4")
+        genre.add("5")
+        genre.add("6")
+        genre.add("7")
+        genre.add("8")
+        genre.add("9")
+        img.add(R.drawable.wish1)
+        img.add(R.drawable.wish2)
+        img.add(R.drawable.wish3)
+        img.add(R.drawable.wish4)
+        img.add(R.drawable.wish5)
+        img.add(R.drawable.wish6)
+        img.add(R.drawable.wish7)
+        img.add(R.drawable.wish8)
+        img.add(R.drawable.wish9)
+
     }
 }
 
