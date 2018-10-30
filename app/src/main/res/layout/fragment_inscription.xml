@@ -1,14 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".InscriptionFragment">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".InscriptionFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:layout_width="330dp"
+            android:layout_height="26dp"
+            android:text="@string/Inscription"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/edNom"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:textAlignment="center" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.507" app:layout_constraintVertical_bias="0.448"/>
 
-</FrameLayout>
+    <EditText
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:id="@+id/edNom"
+            android:inputType="text"
+            android:hint="Nom"
+            app:layout_constraintBottom_toTopOf="@+id/edPre"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.492"/>
+
+    <EditText
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:id="@+id/edPre"
+            android:inputType="text"
+            android:hint="Prenom"
+            app:layout_constraintBottom_toTopOf="@+id/etPass"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.507"/>
+
+    <EditText
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:id="@+id/etPass"
+            android:hint="Mot de passe"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/etConfPass"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="30dp"/>
+
+    <EditText
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:id="@+id/etConfPass"
+            android:inputType="textPassword"
+            android:hint="Retaper Mot de passe"
+            app:layout_constraintBottom_toTopOf="@+id/npAge"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintHorizontal_bias="0.507"/>
+
+    <NumberPicker
+            android:layout_width="330dp"
+            android:layout_height="80dp"
+            android:id="@+id/npAge"
+            app:layout_constraintBottom_toTopOf="@+id/btmOk"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="30dp" app:layout_constraintHorizontal_bias="0.507"/>
+
+    <Button
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:text="Inscription"
+            android:id="@+id/btmOk"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="88dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
