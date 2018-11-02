@@ -12,6 +12,7 @@ import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import org.jetbrains.anko.email
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -23,8 +24,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            this.email("haro.nathan@gmail.com", "Sujet Test", "Bonjour, Test")
         }
 
         val toggle = ActionBarDrawerToggle(
@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 //                startActivity(changePage)
             }
             R.id.nav_anko -> {
-
+                replaceFragment(AnkoDemoFragment())
             }
             R.id.nav_offres -> {
                 replaceFragment(OffreFragment())
