@@ -82,7 +82,7 @@
             app:layout_constraintHorizontal_bias="0.507"/>
 
     <NumberPicker
-            android:layout_width="330dp"
+            android:layout_width="100dp"
             android:layout_height="80dp"
             android:id="@+id/npAge"
             app:layout_constraintBottom_toTopOf="@+id/btmOk"
@@ -92,7 +92,8 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginBottom="30dp" app:layout_constraintHorizontal_bias="0.507"/>
+            android:layout_marginBottom="30dp"
+            app:layout_constraintHorizontal_bias="0.507"/>
 
     <Button
             android:layout_width="250dp"
