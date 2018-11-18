@@ -17,15 +17,13 @@ class CustomView : View {
     lateinit var mCircle: MagicCircle
     lateinit var star: Star
     private var mPaint = Paint()
-    private val d = ResourcesCompat.getDrawable(getResources(), R.drawable.donut, null)
+    private val watch = ResourcesCompat.getDrawable(getResources(), R.drawable.wish4, null)
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
         super.onLayout(changed, left, top, right, bottom)
         mCircle = MagicCircle(width.toFloat(), height.toFloat())
         star = Star(width.toFloat(), height.toFloat())
         mCircle.delta = DELTA
-        if (d != null){
-            d.setBounds(left, top, right,  top+900)
-        }
+        watch?.setBounds(left+50, top+50, left+300,  top+300)
     }
 
     constructor(context: Context) : this(context, null)
@@ -34,9 +32,7 @@ class CustomView : View {
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-        if (d != null){
-            d.draw(canvas)
-        }
+        watch?.draw(canvas)
         mCircle.move()
         star.move()
         canvas?.drawPath(star.createStar(), mPaint)
