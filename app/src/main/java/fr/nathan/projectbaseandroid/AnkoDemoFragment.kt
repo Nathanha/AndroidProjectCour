@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import org.jetbrains.anko.*
+import org.jetbrains.anko.design.snackbar
 
 class AnkoDemoFragment : Fragment(), AnkoLogger {
 
@@ -19,20 +20,25 @@ class AnkoDemoFragment : Fragment(), AnkoLogger {
 
         val buttonerror = root.findViewById(R.id.buttonError) as Button
         buttonerror.setOnClickListener { view ->
-            info("Kotlin is an island")
+            snackbar(view, "Erreur: Vous ne pouvez pas faire ça.").show()
         }
 
         val buttomMessage = root.findViewById(R.id.buttonMessage) as Button
         buttomMessage.setOnClickListener { view ->
-            activity!!.toast("TOAST")
+            view.getContext().toast("Ce message est rapide.")
         }
         val buttondialogue = root.findViewById(R.id.buttonDialogue) as Button
         buttondialogue.setOnClickListener { view ->
-            activity!!.alert("YO") {
-                title = "Awesome quote"
-                positiveButton("Love") { }
-                negativeButton("Not at all") { }
+            activity!!.alert("Ceci est un dialogue.") {
+                title = "Voulez-vous faire disparaître ce message ?"
+                positiveButton("Ok") { }
+                negativeButton("Non") { }
             }.show()
+        }
+
+        val buttonecran = root.findViewById(R.id.buttonEcran) as Button
+        buttonecran.setOnClickListener { view ->
+            activity!!.sendSMS("0123456789", "Ceci est un message de test à ne pas envoyer.")
         }
 
         val buttonweb = root.findViewById(R.id.buttonWeb) as Button

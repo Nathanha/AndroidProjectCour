@@ -30,7 +30,7 @@
             android:layout_height="100dp"
             android:padding="1dp"
             android:src="@drawable/cupcake"
-            android:contentDescription="TODO"/>
+            android:contentDescription="Cupcake"/>
 
 
 

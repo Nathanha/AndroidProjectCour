@@ -11,7 +11,7 @@
         <item
                 android:id="@+id/nav_anko"
                 android:icon="@drawable/ic_menu_gallery"
-                android:title="ANKO(TODO)"/>
+                android:title="ANKO"/>
         <item
                 android:id="@+id/nav_offres"
                 android:icon="@drawable/ic_menu_slideshow"
