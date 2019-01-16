@@ -24,7 +24,7 @@ Application permettant de faire du shopping à distance. Elle comprend un catalo
 
 ![Image FCatalogue](https://raw.githubusercontent.com/Nathanha/AndroidProjectCour/master/Screenshot_1542663101.png)
 
-#### Menu
+#### Menu (Navigation Drawer)
 
 ![Image FCatalogue](https://raw.githubusercontent.com/Nathanha/AndroidProjectCour/master/Screenshot_1542663093.png)
 
@@ -35,5 +35,4 @@ Application permettant de faire du shopping à distance. Elle comprend un catalo
 
 
 ### Remarques
-Le code est propre dans l'ensemble, mais il manque des commentaires ou de la documentation pour comprendre certaines fonctions. L'organisation du code est efficace ce qui aide à bien suivre le flow du code.
-L'application comprend bien les pages requises et elles fonctionnent, mais on a l'impression que certaines pages pourraient mieux suivre le thème de l'application (notamment la page Anko). 
+Pas de remarques à faire sur le code en terme de logique ou de technologie mais il est difficile de le suivre parfois car il n'y a pas énormément d'explications ni de commentaires. Toutes les pages nécessaires sont dans le projet et marchent bien. L'application est plutôt facile a comprendre et utiliser. La page Anko paraît un peu inutile mise à part pour montrer que les technologies sont comprises et implémentées mais il n'y a pas grand chose à redire sinon.
